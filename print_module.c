@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_char.c                                       :+:      :+:    :+:   */
+/*   print_module.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hescoval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 09:23:32 by hescoval          #+#    #+#             */
-/*   Updated: 2023/10/12 09:23:33 by hescoval         ###   ########.fr       */
+/*   Created: 2023/10/12 09:30:45 by hescoval          #+#    #+#             */
+/*   Updated: 2023/10/12 09:30:46 by hescoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	p_char(va_list args, int *printed)
+void	p_module(int *printed)
 {
-	int				hold;
-	unsigned char	print;
-
-	hold = va_arg(args, int);
-	print = (unsigned char) hold;
-	write(1, &print, 1);
+	write(1, "%", 1);
 	*printed += 1;
 }

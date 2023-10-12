@@ -10,10 +10,12 @@ $(NAME): $(OBJS)
 	$(ARCHIVER) $(NAME) $(OBJS)
 
 $(OBJS): $(FILES)
-	$(CCW) -c $(FILES)
+	$(CCW) -ggdb -c $(FILES)
 
 clean:
 	rm -rf *.o 
 
 fclean: clean
 	rm -rf $(NAME)
+
+re: fclean all
